@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LocalFont from "next/font/local";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Minecraft = LocalFont({
   src: [
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
