@@ -3,6 +3,7 @@ import "./globals.css";
 import LocalFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const Minecraft = LocalFont({
   src: [
@@ -35,7 +36,7 @@ export default function RootLayout({
         className={`${Minecraft.variable} ${Pusab.variable} antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <main>{children}<Analytics /></main>
         <Footer />
       </body>
     </html>
