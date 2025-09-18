@@ -3,6 +3,7 @@ import "./globals.css";
 import LocalFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ClientVh from '@/app/clientVh';
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${Minecraft.variable} ${Pusab.variable} antialiased`}
       >
+        <ClientVh />
         <Header />
         <main>{children}<SpeedInsights /><Analytics /></main>
         <Footer />
