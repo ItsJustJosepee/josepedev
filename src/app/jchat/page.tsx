@@ -17,6 +17,19 @@ interface Release {
   html_url: string;
 }
 
+type Language =
+  | "javascript"
+  | "typescript"
+  | "python"
+  | "java"
+  | "csharp"
+  | "cpp"
+  | "html"
+  | "css"
+  | "bash"
+  | string;
+
+
 export default function Home() {
   const [release, setRelease] = useState<Release | null>(null);
 
@@ -41,7 +54,7 @@ export default function Home() {
                   <Highlight
                     theme={themes.vsDark}
                     code={String(children).replace(/\n$/, '')}
-                    language={match[1] as any}
+                    language={match[1] as Language}
                   >
                     {({ className, style, tokens, getLineProps, getTokenProps }) => (
                       <pre
